@@ -13,7 +13,7 @@ try:
     with open('negative_credit_change','w') as f:
         f.write('change_time,credit_change_id,user_id,before_credit,credit_index\n')
         for record in records:
-            f.write("%s,%s,%s\n" % (record[0],record[1],record[2],record[3],record[4]))
+            f.write("%s,%s,%s,%s,%s\n" % (record[0],record[1],record[2],record[3],record[4]))
 
 except (Exception,psycopg2.Error) as error:
     print("connection failed !!!",error)
